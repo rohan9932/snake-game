@@ -61,6 +61,8 @@ class Snake:
 
     def reset(self):
         '''Resets the snake'''
+        for segment in self.segments:
+            segment.goto(1500, 1500)
         self.segments.clear()
         self.create_snake()
         self.head = self.segments[0]
