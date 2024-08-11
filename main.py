@@ -4,16 +4,19 @@ from food import Food
 from scoreboard import ScoreBoard
 import time
 
+# Screen setup
 screen = Screen()
 screen.setup(height=600, width=600)
 screen.title("Rohan's Snake Game ")
 screen.bgcolor("PeachPuff")
 screen.tracer(0)
 
+# making elements
 snake = Snake()
 food = Food()
 scoreboard = ScoreBoard()
 
+# keyboard controls
 screen.listen()
 screen.onkey(fun=snake.up, key="w")
 screen.onkey(fun=snake.down, key="s")
